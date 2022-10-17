@@ -1,0 +1,193 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3%;
+  font-size: 22px;
+  color: hsl(186, 14%, 43%);
+  letter-spacing: 10px;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  padding: 2%;
+  width: 50%;
+  display: flex;
+  border-radius: 12px;
+}
+.card h2 {
+  color: hsl(186, 14%, 43%);
+  font-size: 14px;
+}
+.bill,
+.tip {
+  margin-bottom: 7%;
+}
+.bill-details {
+  width: 60%;
+}
+.input-container {
+  background-color: hsl(189, 41%, 97%);
+  width: 90%;
+  display: flex;
+  padding: 2% 2% 2% 2%;
+  font-size: 24px;
+}
+.input-sign {
+  width: 30%;
+  color: hsl(184, 14%, 56%);
+  font-weight: 400;
+}
+input {
+  background-color: hsl(189, 41%, 97%);
+  outline: 0;
+  border: none;
+  width: 70%;
+  font-size: 24px;
+  text-align: right;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.focusError {
+  outline: 2px solid red;
+}
+.focusSuccess {
+  outline: 2px solid green;
+}
+input::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+.select-tip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: white;
+  text-align: center;
+}
+#custom {
+  display: block;
+  width: 28%;
+  background-color: hsl(189, 41%, 97%) !important;
+  color: hsl(186, 14%, 43%);
+  border-radius: 4px;
+  text-align: center;
+}
+.select-tip div {
+  width: 25%;
+  background-color: hsl(183, 100%, 15%);
+  padding: 2% 2%;
+  border-radius: 4px;
+  font-size: 20px;
+  color: hsl(185, 41%, 84%);
+}
+:is(.select-tip div, #custom):hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
+}
+.tipActive {
+  background-color: hsl(172, 67%, 45%) !important;
+  color: hsl(183, 100%, 15%) !important;
+}
+.tip-summary {
+  background-color: hsl(183, 100%, 15%);
+  padding: 4%;
+  padding-top: 7%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-radius: 10px;
+}
+.tip-summary-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tip-per-person {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.tip-per-person span:nth-child(1) {
+  color: hsl(185, 41%, 84%);
+  font-size: 11px;
+}
+.tip-per-person span:nth-child(2) {
+  color: hsl(186, 14%, 43%);
+  font-size: 9px;
+}
+.tip-summary-container div {
+  color: hsl(172, 67%, 45%);
+  font-size: 30px;
+  font-weight: 700;
+  justify-items: flex-end;
+}
+button {
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  margin-top: 28%;
+  padding: 5% 0;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 5px;
+  color: hsl(183, 100%, 15%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 30px;
+    padding-bottom: 10%;
+    margin-top: 3%;
+  }
+  .bill-details {
+    width: 90%;
+    margin: auto;
+  }
+  .tip-summary {
+    width: 77%;
+    margin: auto;
+    margin-top: 5%;
+  }
+  button {
+    margin-top: 0;
+    margin-bottom: 3%;
+  }
+  .attribution {
+    margin-top: 10%;
+  }
+}

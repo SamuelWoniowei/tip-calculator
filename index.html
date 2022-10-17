@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+
+<body>
+  <main>
+    <header>
+      <span>SPLI</span>
+      <span>TTER</span>
+    </header>
+    <div class="card">
+      <div class="bill-details">
+        <div class="bill">
+          <h2>Bill</h2>
+          <div class="input-container" id="input_container">
+            <label for="amount" class="input-sign">$</label>
+            <input type="number" id="amount" placeholder="0" min="0" autocomplete="off">
+          </div>
+        </div>
+        <!-- End of bill div  -->
+        <div class="tip">
+          <h2>Select Tip %</h2>
+          <div class="select-tip">
+            <div id="5"   onclick='checkTip(5)'>5%</div>
+            <div id="10" onclick='checkTip(10)'>10%</div>
+            <div id="15" onclick='checkTip(15)'>15%</div>
+            <div id="25" onclick='checkTip(25)'>25%</div>
+            <div id="50" onclick='checkTip(50)'>50%</div>
+            <input type="number" id="custom" onkeyup='checkTip(this.value)' placeholder="custom">
+          </div>
+        </div>
+        <!-- End of tip percentage div -->
+        <div class="people">
+          <h2>Number of People</h2>
+          <div class="input-container">
+            <label for="num_of_people" class="input-sign"><i class="las la-user"></i></label>
+            <input type="number" id="num_of_people" value="1" min="1">
+          </div>
+        </div>
+        <!-- End of number of people div -->
+      </div>
+      <div class="tip-summary">
+        <div class="tip-summary-container">
+          <div class="tip-per-person">
+            <span>Tip Amount</span>
+            <span>/ person</span>
+          </div>
+          <div id="tip_per_person">$0.00</div>
+        </div>
+        <!-- End of top amount div -->
+        <div class="tip-summary-container">
+          <div class="tip-per-person">
+            <span>Total</span>
+            <span>/ person</span>
+          </div>
+          <div id="total_people">$0.00</div>
+        </div>
+        <!-- End of tip total div -->
+        <button id="reset">RESET</button>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/SamuelWoniowei">Samuel Blessed Woniowei</a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
